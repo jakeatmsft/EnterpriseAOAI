@@ -91,7 +91,7 @@ response = openai.Completion.create(engine="modelname",
   - [Log Analytics Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial)
 - The table should be named <b>"ApiManagementGatewayLogs"</b>
 - The <b>BackendResponseBody</b> field contains the json response from the OpenAI service which includes the text completion as well as the token and model information.
-- Example query to identify token usage by ip and model 
+- Example query to identify token usage by ip and model:
 ```kusto
 ApiManagementGatewayLogs
 | where OperationId == 'completions_create'
@@ -110,3 +110,12 @@ ApiManagementGatewayLogs
     by ip, model
 ```
 ![img](/assets/monitor_0.png)
+- Example query to monitor prompt completions: 
+```kusto
+ApiManagementGatewayLogs
+| where OperationId == 'completions_create'
+| extend model = tostring(parse_json(BackendResponseBody)['model'])
+| extend prompttokens = parse_json(parse_json(BackendResponseBody)['usage'])['prompt_tokens']
+| extend prompttext = substring(parse_json(parse_json(BackendResponseBody)['choices'])[0], 0, 100)
+```
+![img](/assets/monitor_1.png)
