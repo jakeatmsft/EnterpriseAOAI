@@ -11,18 +11,18 @@ Repository detailing the deployment of an Enterprise Azure OpenAI reference arch
 ### Setup
 Provisioning artifacts, begin by provisioning the solution artifacts listed below:
 
-•	[Azure OpenAI Cognitive Service]( https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/)
-•	[Azure API Management](https://azure.microsoft.com/services/api-management/)
-•	[Azure Monitor](https://azure.microsoft.com/services/monitor/)
+-	[Azure OpenAI Cognitive Service]( https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/)
+-	[Azure API Management](https://azure.microsoft.com/services/api-management/)
+-	[Azure Monitor](https://azure.microsoft.com/services/monitor/)
 
 (Optional)
-•	[Azure Application Gateway](https://azure.microsoft.com/services/application-gateway/)
-•	[Azure Virtual Network](https://azure.microsoft.com/services/virtual-network/)
+-	[Azure Application Gateway](https://azure.microsoft.com/services/application-gateway/)
+-	[Azure Virtual Network](https://azure.microsoft.com/services/virtual-network/)
 
 ### Managed Services
-•	[Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
-•	[Azure Storage](https://azure.microsoft.com/services/storage/)
-•	[Azure Active Directory](https://azure.microsoft.com/services/active-directory/)
+-	[Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
+-	[Azure Storage](https://azure.microsoft.com/services/storage/)
+-	[Azure Active Directory](https://azure.microsoft.com/services/active-directory/)
 
 ## Configuration
 
